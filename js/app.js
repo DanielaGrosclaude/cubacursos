@@ -4,7 +4,7 @@ const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector ('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector ('#vaciar-carrito');
 const listaCursos = document.querySelector('#lista-cursos');
-let articulosCarritos = [];
+let articulosCarrito = [];
 
 
 //listeners
@@ -14,6 +14,12 @@ cargarEventListeners ();
 function cargarEventListeners () {
     //agrega cursos presionando "agregar"
     listaCursos.addEventListener('click', agregarCurso);
+
+    //Elimina del carrito
+    carrito.addEventListener('click', eliminarCurso);
+
+    //Vaciar carrito
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 
 }
 
@@ -43,14 +49,37 @@ function leerDatosCurso (curso){
         cantidad: 1
     }
 
-    //console.log(infoCurso)
-    //agrega elementos al arreglo carrito
-    articulosCarritos = [...articulosCarritos, infoCurso];
 
-    console.log(articulosCarritos);
-    
+    if (articulosCarrito.some( curso => curso.id == infoCurso.id)) {
+        const cursos =articulosCarrito.map ( curso =>{
+            if (curso.id === infoCurso.id){
+                curso.cantidad++;
+                 return curso;
+            }else {
+                return curso;
+            }
+        })
+        articulosCarrito = [...cursos];
+    }else {
+        articulosCarrito = [...articulosCarrito, infoCurso];
+    }
+
     carritoHTML();
+
+    
 }
+
+//elimina el curso del carrito del dom
+function eliminarCurso(e){
+    if(e.target.classList.contains('borrar-curso')){
+        const cursoId = e.target.getAttribute('data-id')
+
+        articulosCarritos = articulosCarritos.filter( curso => curso.id !== cursoId);
+        
+        carritoHTML();
+    }
+}
+
 
 
 //Muestra el carrito de compras en el html
@@ -58,12 +87,12 @@ function leerDatosCurso (curso){
 function carritoHTML(){
 
     //Limpar HTML
-    limpiarHTML();
+    vaciarCarrito();
 
 
     //Recorre el carrito y genera html
-    articulosCarritos.forEach(curso =>{
-        const { image, titulo, precio, cantidad, id } = curso;
+    articulosCarrito.forEach(curso =>{
+        const { imagen, titulo, precio, cantidad, id } = curso;
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>
@@ -83,7 +112,7 @@ function carritoHTML(){
 
 //Elimina cursos del tbody
 
-function limpiarHTML(){
+function vaciarCarrito(){
     //forma lenta
     //contenedorCarrito.innerHTML = '';
 

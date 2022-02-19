@@ -1,33 +1,4 @@
-/*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
 
-
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
-
-
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
   width: 100%;
@@ -112,24 +83,15 @@
 
 }
 
-
-/* Base Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.5em; 
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
 
-
-/* Typography
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -155,16 +117,14 @@ p {
   margin-top: 0; }
 
 
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Links */
 a {
   color: #1EAEDB; }
 a:hover {
   color: #0FA0CE; }
 
 
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Buttons */
 .button,
 button,
 input[type="submit"],
@@ -223,8 +183,6 @@ input[type="button"].button-primary:focus {
   border-color: #D17D5A; }
 
 
-/* Forms
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -235,13 +193,12 @@ input[type="password"],
 textarea,
 select {
   height: 38px;
-  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  padding: 6px 10px; 
   background-color: #fff;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
-/* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -285,8 +242,6 @@ label > .label-body {
   font-weight: normal; }
 
 
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
   list-style: circle inside; }
 ol {
@@ -304,8 +259,6 @@ li {
   margin-bottom: 1rem; }
 
 
-/* Code
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
   padding: .2rem .5rem;
   margin: 0 .2rem;
@@ -320,8 +273,8 @@ pre > code {
   white-space: pre; }
 
 
-/* Tables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* tablas
+ */
 th,
 td {
   padding: 12px 15px;
@@ -335,8 +288,8 @@ td:last-child {
   padding-right: 0; }
 
 
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* espaciado
+ */
 button,
 .button {
   margin-bottom: 1rem; }
@@ -357,8 +310,6 @@ form {
   margin-bottom: 2.5rem; }
 
 
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
   width: 100%;
   box-sizing: border-box; }
@@ -370,18 +321,12 @@ form {
 .u-pull-left {
   float: left; }
 
-
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
 
-
-/* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Self Clearing Goodness */
 .container:after,
@@ -394,25 +339,16 @@ hr {
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
 
-
-/* Larger than mobile */
+/* mobile */
 @media (min-width: 400px) {}
 
-/* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {}
 
-/* Larger than tablet */
 @media (min-width: 750px) {}
 
-/* Larger than desktop */
+
 @media (min-width: 1000px) {}
 
-/* Larger than Desktop HD */
+/* desktop HD */
 @media (min-width: 1200px) {}
